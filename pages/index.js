@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import React, { useEffect, Fragment } from 'react';
-import HeaderLogos from '../components/HeaderLogos';
+import HeaderLogos from '../components/HeaderLogos/HeaderLogos';
 // import Portfolio from '../components/portfolio/Portfolio';
 // import Features from '../components/Features/Features';
 // import Blog from '../components/Blog/Blog';
