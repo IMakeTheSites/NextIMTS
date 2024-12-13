@@ -3,13 +3,15 @@ import classes from './Header.module.scss';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import Image from 'next/image';
+import { Box, Button } from '@mui/material';
+import Link from 'next/link';
 
 function Header() {
   return (
     <div className={classes.Header}>
       <h1 className={classes.Header__heading}>
-        Independent
-        <br /> <span>consultants</span>
+        Mark Makes
+        <br /> <span>Sites and Apps!</span>
       </h1>
       <Carousel
         showArrows={true}
@@ -18,6 +20,7 @@ function Header() {
         showStatus={false}
         autoPlay={true}
         interval={6100}
+        dynamicHeight
       >
         <div className={classes.Carousel}>
           <div className={classes.myCarousel}>
@@ -53,12 +56,13 @@ function Header() {
         </div>
       </Carousel>
       <div className={classes.Header__callUs}>
-        <p className={classes.Header__callUs__text}>
-          Contact Us Today for FREE Consultations
-        </p>
-        <button className={classes.Header__callUs__button}>
-          Call +1 4356 2666
-        </button>
+        <Box textAlign="center">
+          <Link href="/contact">
+            <Button variant="contained" size="large">
+              Contact Me For Free Consultation!
+            </Button>
+          </Link>
+        </Box>
       </div>
     </div>
   );
