@@ -1,4 +1,4 @@
-import classes from "./Call.module.scss";
+import classes from './Call.module.scss';
 
 const Call = () => {
   return (
@@ -18,16 +18,16 @@ const Call = () => {
           <path
             d="M33 17L1 17"
             stroke="#3AB982"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecape="round"
+            strokeLinejoin="round"
           />
           <path
             d="M17 33L1 17L17 1"
             stroke="#3AB982"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       </span>
@@ -42,16 +42,16 @@ const Call = () => {
           <path
             d="M1 17L33 17"
             stroke="#3AB982"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M17 1L33 17L17 33"
             stroke="#3AB982"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       </span>
