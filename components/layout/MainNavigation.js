@@ -15,7 +15,7 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
-const pages = ['About', 'blog', 'contact', 'work'];
+const pages = ['About', 'blog', 'contact', 'portfolio'];
 
 function MainNavigation() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

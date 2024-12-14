@@ -26,7 +26,7 @@ function Header() {
           <div className={classes.myCarousel}>
             <Image
               src="/background.jpg"
-              alt="Two people working at a desk at home"
+              alt="Guy working at a desk at home"
               width={1400}
               height={706}
             />
