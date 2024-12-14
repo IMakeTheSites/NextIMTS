@@ -55,15 +55,15 @@ function Header() {
           </div>
         </div>
       </Carousel>
-      <div className={classes.Header__callUs}>
+      {/* <div className={classes.Header__callUs}>
         <Box textAlign="center" marginBottom="15px">
           <Link href="/contact">
             <Button variant="contained" size="large">
-              Contact Me For Free Consultation!
+              Free Consultation!
             </Button>
           </Link>
         </Box>
-      </div>
+      </div> */}
     </div>
   );
 }

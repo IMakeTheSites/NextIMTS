@@ -8,6 +8,7 @@ import Portfolio from '../components/portfolio/Portfolio';
 // import InquiryForm from '../components/InquiryForm/InquiryForm';
 import { Box } from '@mui/material';
 import Header from '../components/Header';
+import Features from '../components/Features';
 
 export default function HomePage() {
   return (
@@ -24,6 +25,7 @@ export default function HomePage() {
         <Header />
         <HeaderLogos />
         <Portfolio />
+        <Features />
       </Fragment>
     </Box>
   );

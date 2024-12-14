@@ -10,11 +10,13 @@ const Portfolio = () => {
   return (
     <section className={classes.Portfolio}>
       <div className={classes.Portfolio__details}>
-        <h2>Portfolio</h2>
-        <p>
+        {/* <h2>Portfolio</h2> */}
+        {/* <p>
           Check out some of <br /> my projects
-        </p>
-        <Button onClick={<Link href="/portfolio"></Link>}>View More</Button>
+        </p> */}
+        <Link href="/portfolio">
+          <Button>Some Projects</Button>
+        </Link>
       </div>
       <div className={classes.Portfolio__items}>
         <PortfolioCard
