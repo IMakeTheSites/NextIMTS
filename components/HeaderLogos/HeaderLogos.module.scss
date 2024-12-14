@@ -1,35 +1,11 @@
-@import "../../styles/global.scss";
+@import '../../styles/global.scss';
 
 .HeaderLogos {
-  background-color: $gray;
-  min-height: 18.9rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &__list {
-    width: 100%;
+  width: 100%;
+  .MuiGrid-item {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-  }
-
-  @media only screen and (max-width: 600px) {
-    padding: 0 2rem;
-  }
-
-  img {
-    width: 100%;
-
-    @media only screen and (max-width: 850px) {
-      width: 80%;
-    }
-  }
-
-  &__logo3,
-  &__logo4 {
-    @media only screen and (max-width: 600px) {
-      display: none;
-    }
+    margin: 5px;
   }
 }

@@ -1,31 +1,98 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import classes from './MainNavigation.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
+import {
+  AppBar,
+  Box,
+  Button,
+  Container,
+  IconButton,
+  Menu,
+  MenuItem,
+  Toolbar,
+  Typography,
+} from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+
+const pages = ['About', 'blog', 'contact', 'portfolio'];
 
 function MainNavigation() {
-    const [isNavOpen, setIsNavOpen] = useState(false);
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
 
-    return (
-         <nav className={classes.MainNavigation}>
-             <div className={classes.MainNavigation__logo}>
-                 <Link href='/'>
-                    <a> <Image
-                     src="/IMTSlogo.png"
-                     alt="I Make the Sites Logo"
-                     width={99}
-                     height={111} /></a>
-                 </Link>
-             </div>
-             <ul className={isNavOpen ? `${classes.MainNavigation__list} ${classes.open}` : classes.MainNavigation__list}>
-                 <li className={classes.MainNavigation__list__item} onClick={e => setIsNavOpen(false)}><Link href='/'>Home</Link></li>
-                 <li className={classes.MainNavigation__list__item} onClick={e => setIsNavOpen(false)}><Link href='/about'>About</Link></li>
-                 <li className={classes.MainNavigation__list__item} onClick={e => setIsNavOpen(false)}><Link href='/work'>Work</Link></li>
-                 <li className={classes.MainNavigation__list__item} onClick={e => setIsNavOpen(false)}><Link href='/blog'>Blog</Link></li>
-                 <li className={classes.MainNavigation__list__item} onClick={e => setIsNavOpen(false)}><Link href='/'>Home</Link></li>
-             </ul>
-         </nav>
-    )
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  return (
+    <AppBar position="static">
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <Link href="/">
+            <Image
+              src="/IMTSlogo.png"
+              alt="I Make the Sites Logo"
+              width={99}
+              height={111}
+              sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}
+            />
+          </Link>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'none' } }}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{ display: { xs: 'block', md: 'none' } }}
+            >
+              {pages.map((page) => (
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
+            {pages.map((page) => (
+              <Link href={page} key={page}>
+                <Button
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                >
+                  {page}
+                </Button>
+              </Link>
+            ))}
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
+  );
 }
 
-export default MainNavigation
+export default MainNavigation;
