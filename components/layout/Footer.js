@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className={classes.Footer}>
       <div className={classes.Footer__list}>
-        <div className={classes.Footer__list__about}>
+        {/* <div className={classes.Footer__list__about}>
           <div className={classes.Footer__list__about__logo}>
             <Link href="/">
               {' '}
@@ -19,8 +19,7 @@ const Footer = () => {
               />
             </Link>
           </div>
-          <p>We make the sites, so you don&apos;t have to!</p>
-        </div>
+        </div> */}
         <div className={classes.Footer__list__links}>
           <h3>Quick Links</h3>
           <ul className={classes.Footer__list__links__list}>
@@ -31,7 +30,7 @@ const Footer = () => {
               <Link href="/about">About</Link>
             </li>
             <li>
-              <Link href="/work">Portfolio</Link>
+              <Link href="/portfolio">Portfolio</Link>
             </li>
             <li>
               <Link href="/blog">Blog</Link>
@@ -44,13 +43,9 @@ const Footer = () => {
         <div className={classes.Footer__list__icons}>
           <h3>stay connected</h3>
           <div className={classes.Footer__list__icons__list}>
-            <a
-              href="https://www.facebook.com/imakethesites"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {' '}
-              <svg
+            <a href="mailto: imakethesites@gmail.com">
+              {/* Insert svg Email icon below */}M{' '}
+              {/* <svg
                 className={classes.Footer__list__icons__list__icon}
                 viewBox="0 0 8 16"
                 fill="none"
@@ -60,7 +55,7 @@ const Footer = () => {
                   d="M6.53945 2.65667H8V0.112667C7.74802 0.078 6.88143 0 5.87218 0C3.76635 0 2.32381 1.32467 2.32381 3.75933V6H0V8.844H2.32381V16H5.1729V8.84467H7.40272L7.75669 6.00067H5.17224V4.04133C5.1729 3.21933 5.39422 2.65667 6.53945 2.65667Z"
                   fill="white"
                 />
-              </svg>
+              </svg> */}
             </a>
             <a
               href="https://www.linkedin.com/company/i-make-the-sites/"
@@ -118,15 +113,15 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className={classes.Footer__list__call}>
+        {/* <div className={classes.Footer__list__call}>
           <a href="mailto: info@imakethesites.com">
             Mail: info@imakethesites.com
           </a>
-        </div>
+        </div> */}
       </div>
       <div className={classes.Footer__bottom}>
-        <p>Copyright © 2021 imakethesites.com</p>
-        <p>Powered by imakethesites.com</p>
+        <p>Copyright © 2024 I Make the Sites, LLC</p>
+        {/* <p>Powered by imakethesites.com</p> */}
       </div>
     </footer>
   );
