@@ -10,3 +10,4 @@ const Cover = ({ className, title }) => {
     </div>
   );
 };
+export default Cover;

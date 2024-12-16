@@ -1,25 +1,11 @@
 import React from 'react';
 import classes from './Footer.module.scss';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const Footer = () => {
   return (
     <footer className={classes.Footer}>
       <div className={classes.Footer__list}>
-        {/* <div className={classes.Footer__list__about}>
-          <div className={classes.Footer__list__about__logo}>
-            <Link href="/">
-              {' '}
-              <Image
-                src="/IMTSlogo.png"
-                alt="I Make the Sites Logo"
-                width={99}
-                height={111}
-              />
-            </Link>
-          </div>
-        </div> */}
         <div className={classes.Footer__list__links}>
           <h3>Quick Links</h3>
           <ul className={classes.Footer__list__links__list}>
