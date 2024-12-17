@@ -15,7 +15,7 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
-const pages = ['About', 'blog', 'contact', 'portfolio'];
+const pages = ['About', 'Blog', 'Contact', 'Portfolio'];
 
 function MainNavigation() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -71,7 +71,9 @@ function MainNavigation() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                  <Link href={page} key={page}>
+                    <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>

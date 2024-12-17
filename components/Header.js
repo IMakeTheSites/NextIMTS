@@ -10,8 +10,8 @@ function Header() {
   return (
     <div className={classes.Header}>
       <h1 className={classes.Header__heading}>
-        Mark Makes
-        <br /> <span>Sites and Apps!</span>
+        Mark Makes The Sites
+        <br /> <span>So You Don&apos;t Have To!</span>
       </h1>
       <Carousel
         showArrows={true}
@@ -55,15 +55,6 @@ function Header() {
           </div>
         </div>
       </Carousel>
-      <div className={classes.Header__callUs}>
-        <Box textAlign="center" marginBottom="15px">
-          <Link href="/contact">
-            <Button variant="contained" size="large">
-              Contact Me For Free Consultation!
-            </Button>
-          </Link>
-        </Box>
-      </div>
     </div>
   );
 }
